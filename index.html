@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children’s Safeguarding in Practice: Live Q&A</title>
+    <style>
+        /* --- General Styling & Background --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px; /* Add padding for smaller screens */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top */
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        /* --- Main Content Card --- */
+        .container {
+            width: 100%;
+            max-width: 700px; /* Increased max-width for more content */
+            background: rgba(255, 255, 255, 0.3); /* Slightly more opaque for readability */
+            backdrop-filter: blur(25px) saturate(150%);
+            -webkit-backdrop-filter: blur(25px) saturate(150%);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            padding: 40px;
+            text-align: left; /* Align text to the left for better readability */
+        }
+        
+        /* --- Typography --- */
+        h1 {
+            color: #1a1a1a;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            color: #002b5c;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            border-bottom: 2px solid rgba(0, 43, 92, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #1d4ed8;
+            margin-bottom: 20px;
+        }
+
+        p, li {
+            color: #3d3d3d;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .bio-text {
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #1d4ed8;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .date-tbc {
+            background-color: #fffbeb;
+            color: #b45309;
+            padding: 12px 18px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            margin: 20px 0;
+        }
+        
+        .host-info {
+             display: flex;
+             align-items: center;
+             gap: 15px;
+             margin-bottom: 20px;
+        }
+        
+        .host-info img {
+             width: 80px;
+             height: 80px;
+             border-radius: 50%;
+             object-fit: cover;
+             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- Form Styling --- */
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid rgba(209, 213, 219, 0.8);
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+        }
+
+        /* --- Button Styling --- */
+        .submit-btn {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            text-align: center;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background-color: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(29, 78, 216, 0.4);
+        }
+        
+        .submit-btn:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+            transform: translateY(0);
+        }
+        
+        /* --- Form Message Styling --- */
+        #form-message {
+            margin-top: 15px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .message-success { color: #166534; }
+        .message-error { color: #b91c1c; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Children’s Safeguarding in Practice: Your Questions Answered</h1>
+        <p class="subtitle">A Live Q&A Webinar</p>
+        
+        <div class="host-info">
+             <img src="https://img.icons8.com/pastel-glyph/128/person-male--v2.png" alt="Profile Picture of Chanel Johnson">
+             <div>
+                <p style="margin:0; font-weight: bold; font-size: 1.2rem; color: #1a1a1a;">Chanel Johnson</p>
+                <p style="margin:0; color: #555;">Founder of Higher Level Consultancy</p>
+             </div>
+        </div>
+        
+        <p>A practical and interactive safeguarding Q&A webinar where we’ll talk openly, share experiences, and make sense of safeguarding together, led by someone who’s been there, done the work, and still deeply cares about getting it right.</p>
+
+        <p>It’s a space to ask your questions, share your thoughts, and learn in a supportive, judgement-free space.</p>
+        
+        <h2>About the Host</h2>
+        <p class="bio-text">I’m the founder of Higher Level Consultancy, a training and consultancy company that focuses on child safeguarding. I’m also a qualified social worker and manager with over 10 years of frontline experience in local authority children’s services. I’m passionate about helping professionals feel more confident in recognising and responding to safeguarding concerns. I know how complex and challenging this work can be, so I focus on making my training real, reflective and rooted in everyday practice. Through HLC, my goal is to make safeguarding feel more accessible, because it really is everyone’s responsibility.</p>
+        
+        <h2>Who is this for?</h2>
+        <p>Join us for a live and interactive Q&A webinar focused entirely on child safeguarding practice. Whether you’re working in education, health, social care, early years, youth services or the voluntary sector — this session is for you.</p>
+        
+        <h2>Webinar Agenda</h2>
+        <p>This webinar offers you the space to:</p>
+        <ul>
+            <li>✅ Ask your safeguarding questions, no matter how big or small</li>
+            <li>✅ Learn from real case examples and live discussion</li>
+            <li>✅ Explore what good safeguarding looks like in everyday practice</li>
+            <li>✅ Reflect on dilemmas, thresholds, disclosures and professional curiosity</li>
+        </ul>
+
+        <h2>Register Your Interest</h2>
+        <div class="date-tbc">Date & Time: To Be Confirmed</div>
+        <p>The webinar date is not yet set. Fill out the form below to get notified as soon as the date is announced and secure your spot.</p>
+
+        <form class="signup-form" id="signupForm">
+            <input type="text" id="fullName" name="fullName" class="input-field" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" class="input-field" placeholder="Email Address" required>
+            <input type="tel" id="phone" name="phone" class="input-field" placeholder="Phone Number (Optional)">
+            <button type="submit" class="submit-btn" id="submitButton">Notify Me!</button>
+        </form>
+        <div id="form-message"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('signupForm');
+        const submitButton = document.getElementById('submitButton');
+        const formMessage = document.getElementById('form-message');
+        
+        // ⚠️ PASTE YOUR GOOGLE APPS SCRIPT URL HERE!
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwI4KN06ldYQ7sd1CIbmnsA79EJDakUuMM_3tkvpIIWpL7yXEO8fMmJIsQlsRWrID-3xg/exec';
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    formMessage.textContent = 'Thank you! We will notify you when the date is set.';
+                    formMessage.className = 'message-success';
+                    form.reset();
+                })
+                .catch(error => {
+                    formMessage.textContent = 'Error! Could not submit. Please try again.';
+                    formMessage.className = 'message-error';
+                    console.error('Error!', error.message);
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Notify Me!';
+                });
+        });
+    </script>
+
+</body>
+</html>
