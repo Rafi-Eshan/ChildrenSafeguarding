@@ -218,8 +218,7 @@
         const submitButton = document.getElementById('submitButton');
         const formMessage = document.getElementById('form-message');
         
-        // ⚠️ PASTE YOUR GOOGLE APPS SCRIPT URL HERE!
-        const scriptURL = 'PASTE_YOUR_WEB_APP_URL_HERE'; 
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwI4KN06ldYQ7sd1CIbmnsA79EJDakUuMM_3tkvpIIWpL7yXEO8fMmJIsQlsRWrID-3xg/exec'; 
 
         form.addEventListener('submit', e => {
             e.preventDefault();
@@ -227,23 +226,29 @@
             submitButton.textContent = 'Submitting...';
             
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => response.json()) // 1. Always parse the response as JSON
+                .then(response => response.json()) 
                 .then(data => {
-                    // 2. Check the 'result' property from our script's response
                     if (data.result === 'success') {
                         formMessage.textContent = 'Thank you! We will notify you when the date is set.';
                         formMessage.className = 'message-success';
                         form.reset();
                     } else {
-                        // If result is 'error', throw an error with the specific message from the script
                         throw new Error(data.message || 'An unknown error occurred.');
                     }
                 })
                 .catch(error => {
-                    // 3. Display the error message (either from validation or network issues)
-                    formMessage.textContent = error.message;
+                    // --- THIS IS THE IMPROVED PART ---
+                    // We check if the error message is the specific one we created for validation.
+                    // The 'includes' check makes it robust.
+                    if (error.message.includes('valid 11-digit phone number')) {
+                        // If it is the validation error, show the helpful message from the script.
+                        formMessage.textContent = error.message;
+                    } else {
+                        // For all other errors (network issues, server crashes, etc.), show a generic, user-friendly message.
+                        formMessage.textContent = 'Sorry, we couldn\'t submit your form. Please try again later.';
+                    }
                     formMessage.className = 'message-error';
-                    console.error('Error!', error.message);
+                    console.error('Error details for developer:', error); // The detailed error is still logged to the console for you to see.
                 })
                 .finally(() => {
                     submitButton.disabled = false;
