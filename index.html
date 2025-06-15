@@ -110,6 +110,7 @@
             flex-direction: column;
             gap: 15px;
             margin-top: 20px;
+            align-items: center;
         }
 
         .input-field {
@@ -131,12 +132,13 @@
 
         /* --- Button Styling --- */
         .submit-btn {
+            width: 30%;
             padding: 15px 20px;
             border: none;
             border-radius: 10px;
             background-color: #2563eb;
             color: white;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -201,14 +203,14 @@
         </ul>
 
         <h2>Register Your Interest</h2>
-        <div class="date-tbc">Date & Time: To Be Confirmed</div>
-        <p>The webinar date is not yet set. Fill out the form below to get notified as soon as the date is announced and secure your spot.</p>
+        <div class="date-tbc">Date & Time: 17th July, 2025 - 12:00 PM (UK Time)</div>
+        <p>Fill out the form below to secure your spot!</p>
 
         <form class="signup-form" id="signupForm">
             <input type="text" id="fullName" name="fullName" class="input-field" placeholder="Full Name" required>
             <input type="email" id="email" name="email" class="input-field" placeholder="Email Address" required>
             <input type="tel" id="phone" name="phone" class="input-field" placeholder="Phone Number (Optional)">
-            <button type="submit" class="submit-btn" id="submitButton">Notify Me!</button>
+            <button type="submit" class="submit-btn" id="submitButton">Submit</button>
         </form>
         <div id="form-message"></div>
     </div>
@@ -229,7 +231,7 @@
                 .then(response => response.json()) 
                 .then(data => {
                     if (data.result === 'success') {
-                        formMessage.textContent = 'Thank you! We will notify you when the date is set.';
+                        formMessage.textContent = 'Thank you! Your information has been recorded.';
                         formMessage.className = 'message-success';
                         form.reset();
                     } else {
@@ -252,7 +254,7 @@
                 })
                 .finally(() => {
                     submitButton.disabled = false;
-                    submitButton.textContent = 'Notify Me!';
+                    submitButton.textContent = 'Submit';
                 });
         });
     </script>
